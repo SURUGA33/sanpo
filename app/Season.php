@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class season extends Model
 {
-    //
+    public function locations(){
+        return $this->belongsToMany('App\Location');
+    }
 }
 
-public function locations(){
-    return $this->belongsToMany('App\Location');
-}
+
